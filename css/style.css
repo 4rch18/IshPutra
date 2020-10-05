@@ -354,6 +354,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   background-color: #e6e6e6;
   color: #fff;
+  background-repeat: no-repeat;
 }
 
 #iporg-home a {
@@ -374,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.5);
 }
 #iporg-home, #iporg-home .text-wrap {
-  height: 750px;
+  height: 680px;
 }
 #iporg-home .text-wrap {
   display: table;
@@ -396,8 +397,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media screen and (max-width: 990px) {
-  #iporg-home .text-inner h1 span {
-    width:60%;
+  /*#iporg-home .text-inner h1 span {*/
+  /*  width:60%;*/
+  /*}*/
+
+  #iporg-home {
+    background-image: url(../images/bg-red.png);
+    background-repeat: repeat;
+    background-position-y: 0;
+    background-size: auto;
   }
 }
 
@@ -406,14 +414,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
 
-  #iporg-home .text-inner h1 span {
-    width:80%;
-  }
+  /*#iporg-home .text-inner h1 span {*/
+  /*  width:80%;*/
+  /*}*/
 }
 
 @media screen and (max-width: 550px) {
   #iporg-home .text-inner h1 span {
     width:100%;
+  }
+
+  .iporg-logo-main {
+    height: 250px;
+    margin: 0;
+    width: 100%;
+    float:none;
+    background-position: center;
   }
 }
 
@@ -457,15 +473,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (max-width: 990px) {
-  #iporg-home .text-inner .call-to-action {
-    width: 60%;
-  }
+  /*#iporg-home .text-inner .call-to-action {*/
+  /*  width: 60%;*/
+  /*}*/
 }
 
 @media screen and (max-width: 768px) {
-  #iporg-home .text-inner .call-to-action {
-    width: 80%;
-  }
+  /*#iporg-home .text-inner .call-to-action {*/
+  /*  width: 80%;*/
+  /*}*/
 }
 
 @media screen and (max-width: 550px) {
@@ -519,18 +535,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#iporg-aboutus,
 #iporg-services,
-#iporg-counters {
-  padding: 3em 0;
-}
-
+#iporg-counters,
 #iporg-testimony,
 #iporg-explore,
 #iporg-footer,
 #iporg-work,
 #iporg-pricing,
 #iporg-blog {
-  padding: 3em 0;
+  padding: 2em 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -551,7 +565,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .iporg-explore {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .iporg-portfolio {
@@ -866,10 +880,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .iporg-services .box-services {
   position: relative;
-  margin: 0 30px 70px 20px;
+  margin: 0 30px 70px 0px;
 }
 .iporg-services .box-services .icon {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .iporg-services .box-services .icon span {
   width: 130px;
@@ -904,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .iporg-counters {
-  padding: 3em 0;
+  padding: 0em 0;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -923,7 +937,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .iporg-counters .iporg-counter-label {
   font-size: 16px;
-  margin-bottom: 2em;
+  margin-bottom: 0em;
   display: block;
 }
 
@@ -1495,4 +1509,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .iconblood {
   color: #B00010;
+}
+
+.navbar-header .iporg-logo img {
+  width: auto;
+  height: 55px;
+  margin-top:-15px;
+}
+
+/*.iporg-logo-main {*/
+/*  height: 250px;*/
+/*  width: 230px;*/
+/*  float: left;*/
+/*  margin-right: 100px;*/
+
+/*  background: url("../images/ishputra-logo.jpg");*/
+/*  background-repeat: no-repeat;*/
+/*  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 2px #3f3f3f;*/
+/*}*/
+
+.iporg-logo-main {
+  background: url("../images/ishputra-logo-trans.png");
+  width: 230px;
+  height: 250px;
+  float: left;
+  margin: 40px;
+}
+
+#iporg-aboutus {
+  margin-top: 70px;
+  padding-top:20px;
 }
