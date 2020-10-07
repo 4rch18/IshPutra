@@ -513,8 +513,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 #iporg-home .text-inner .call-to-action a.demo {
-  border: 2px solid #3EC483;
-  background: #3EC483;
+  border: 2px solid #00C853;
+  background: #00C853;
   text-decoration: none !important;
 }
 @media screen and (max-width: 768px) {
