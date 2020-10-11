@@ -1,0 +1,31 @@
+version: 2.1
+description: |
+  copy files to S3 bucket and then create an Cloudfront invalidation
+  on the distribution.
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
+commands:
+  copy-site:
+    description: |
+      copy contents of local dir to S3 bucket then invalidate cloudfront cache
+    parameters:
+      access-key:
+        description: "Value of AWS_ACCESS_KEY_ID"
+        type: string
+      secret-key:
+        description: "Value of AWS_SECRET_ACCESS_KEY"
+        type: string
+      to:
+        description: "A URI to an S3 bucket, i.e. 's3://the-name-my-bucket'"
+        type: string    
+      from:
+        description: "A local *directory* path to sync with S3"
+        type: string
+    steps:
+    - aws-s3/sync:
+        from: $local_from
+        to: $s3_bucket
+        aws-access-key-id: $AWS_AK_ID
+        aws-secret-access-key: $AWS_AK
+        arguments: |
+          --delete
