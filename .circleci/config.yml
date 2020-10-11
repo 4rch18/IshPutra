@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/python:3.6.3
 
-    working_directory: $copy_from_dir
+    working_directory: ~/ishputra
 
     steps:
       - checkout
@@ -15,4 +15,4 @@ jobs:
 
       - run:
           name: s3 deploy
-          command: ~/.local/bin/aws s3 sync --delete --acl public-read $copy_from_dir $s3_bucket --exclude ".git/*" --region $s3_region
+          command: ~/.local/bin/aws s3 sync --delete --acl public-read ~/ishputra $s3_bucket --exclude ".git/*" --region $s3_region
